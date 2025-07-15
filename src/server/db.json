@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "phone": "081234567890"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "phone": "081234567891"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Transfer Bank",
+      "category": "financial",
+      "price": 2500,
+      "image": "https://wondr.bni.co.id/api/image/transfer_1751639831872.png"
+    },
+    {
+      "id": 2,
+      "name": "Bayar Listrik",
+      "category": "utility",
+      "price": 1500,
+      "image": "https://wondr.bni.co.id/api/image/electricity_1751639831873.png"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "userId": 1,
+      "productId": 1,
+      "amount": 100000,
+      "status": "success",
+      "date": "2024-01-15"
+    }
+  ]
+}

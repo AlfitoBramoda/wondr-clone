@@ -3,9 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --turquoise-highlight: #1ABC9C;
-  --granite: #616161;
-  --charcoal-gray: #36454F;
 }
 /* 
 @theme inline {
@@ -25,5 +22,10 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'TT Interphases Pro', sans-serif;
+  font-family: var(--font-inter), 'TT Interphases Pro', sans-serif;
+}
+
+.bg-turqoise-highlight {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 244 241/var(--tw-bg-opacity))
 }
