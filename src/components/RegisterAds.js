@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function UdahSiap() {
+export default function RegisterAds() {
   return (
     <section className="bg-[#deef5a] relative lg:px-0 lg:pt-[72px]">
       <div className="container-120">
