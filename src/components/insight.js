@@ -1,5 +1,3 @@
-"use client"; 
-
 export default function FinancialInsights() {
   return (
     <div className="bg-slate-50 min-h-screen w-full flex items-center justify-center p-4 sm:p-6 md:p-8 font-sans">
