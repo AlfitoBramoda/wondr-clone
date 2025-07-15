@@ -6,6 +6,7 @@ import Swiper from '../components/SwiperCard';
 import Card from '../components/Card'
 import FinancialInsights from '../components/insight';
 import Footer from '@/components/footer';
+import SectionPromo from '../components/SectionPromo';
 import { useRouter } from 'next/router';
 
 function Home() {  
@@ -17,6 +18,7 @@ function Home() {
       <Card/>
       <Swiper/>
       <FinancialInsights/>
+      <SectionPromo/>
       <Footer/>
     </div>
   );
