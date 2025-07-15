@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Jendral() {
+export default function Pinjaman() {
   return (
     <section className="bg-white py-12 px-4 ">
       <h2 className="text-[50px] ps-40 pe-40 font-bold text-center pb-8 text-[#000] leading-[60px]">
