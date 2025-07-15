@@ -1,13 +1,20 @@
-import Footer from '../components/footer';
+"use client";
 
-export default function HomePage() {
+import Navbar from '../components/Navbar';
+import Carousel from '../components/Carousel';
+import Card from '../components/Card'
+import FinancialInsights from '../components/insight';
+import Footer from '../components/footer'
+
+function Home() {  
   return (
-    <main>
-      <h1 className="text-3xl font-bold text-center mt-10"> </h1>
-      
-      {/* Konten lain di sini */}
-
-      <Footer />
-    </main>
+    <div>
+      <Navbar />
+      <Carousel />
+      <Card/>
+      <FinancialInsights/>
+      <Footer/>
+    </div>
   );
 }
+export default Home;
