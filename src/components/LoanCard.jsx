@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Pinjaman() {
+export default function LoanCard() {
   return (
     <section className="bg-white py-12 px-4 ">
       <h2 className="ps-30 pe-30 pb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] !leading-snug lg:!leading-tight text-black text-center font-semibold  ">
