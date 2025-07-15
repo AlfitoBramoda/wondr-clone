@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import Navbar from './components/Navbar.jsx';
-import Carousel from './components/Carousel.jsx';
+import Navbar from '../components/Navbar';
+import Carousel from '../components/Carousel';
 
 function Home() {  
   return (
