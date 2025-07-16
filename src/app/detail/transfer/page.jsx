@@ -3,6 +3,7 @@
 import Navbar from '@/components/Navbar'
 import CarouselTutorial from '@/components/fitur/carouselTutorial'
 import Hero from '@/components/fitur/hero'
+import Footer from '@/components/footer';
 
 export default function Transfer() {
     return (
@@ -14,6 +15,7 @@ export default function Transfer() {
                 text2='Tagihan apapun semuanya serba ada!' 
                 text3='Dari token listrik sampai bayar tagihan pendidikan kuliah semuanya komplit.'/>
             <CarouselTutorial/>
+            <Footer/>
         </>
     )
 }
