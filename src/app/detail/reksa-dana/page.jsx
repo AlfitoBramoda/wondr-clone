@@ -9,6 +9,7 @@ import { ObligasiAds } from '@/components/detailObligasi/ObligasiAds';
 import { ReksadanaFaq } from '@/components/detailReksadana/ReksadanaFaq';
 import Footer from '@/components/footer';
 
+
 export default function ReksaDana() {
     return (
         <>
