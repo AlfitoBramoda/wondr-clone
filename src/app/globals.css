@@ -1,14 +1,49 @@
 @import "tailwindcss";
+/* globals.css */
+
+@font-face {
+  font-family: 'YourCustomFont'; /* Choose a name for your font family */
+  src: url('../../public/fonts/TT_Interphases_Pro_Light.abfbb5b0.ttf') format('truetype');
+  font-weight: 300; /* Corresponds to 'light' */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YourCustomFont';
+  src: url('../../public/fonts/TT_Interphases_Pro_Medium.ec20b052.ttf') format('truetype');
+  font-weight: 500; /* Corresponds to 'medium' */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YourCustomFont';
+  src: url('../../public/fonts/TT_Interphases_Pro_DemiBold.fd79960c.ttf') format('truetype');
+  font-weight: 600; /* Corresponds to 'demibold' */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YourCustomFont';
+  src: url('../../public/fonts/TT_Interphases_Pro_Bold.49c2874c.ttf') format('truetype');
+  font-weight: 700; /* Corresponds to 'bold' */
+  font-style: normal;
+}
+
+/* Apply the custom font to your entire application */
+body {
+  font-family: 'YourCustomFont', sans-serif;
+}
+
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,38 +53,3 @@
   }
 }
 
-body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
-     :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
-}
-
-.bg-turqoise-highlight {
-    --tw-bg-opacity: 1;
-    background-color: rgb(217 244 241/var(--tw-bg-opacity))
-}
-
-
-.bg-turqoise-highlight {
-  --tw-bg-opacity: 1;
-  background-color: rgb(217 244 241/var(--tw-bg-opacity))
-}
-
-.text-granite {
-  --tw-text-opacity: 1;
-  color: rgb(122 122 122 / var(--tw-text-opacity));
-}
-
-.text-charcoal-gray {
-  --tw-text-opacity: 1;
-  color: rgb(78 78 78 / var(--tw-text-opacity));
-}
-
-.text-neutral-900 {
-  --tw-text-opacity: 1;
-  color: rgb(20 20 20 / var(--tw-text-opacity));
-}
