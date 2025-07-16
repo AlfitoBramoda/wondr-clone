@@ -117,7 +117,6 @@ export const LanguageProvider = ({ children }) => {
           flexible: { title: "Flexible transfer schedule", description: "Want to schedule or send to multiple people at once? You can!" }
         }
       }
-<<<<<<< Updated upstream
     },
     zh: {
       navbar: {
@@ -167,8 +166,6 @@ export const LanguageProvider = ({ children }) => {
           flexible: { title: "灵活的转账时间安排", description: "想要设置时间表或同时向多人发送？完全可以！" }
         }
       }
-=======
->>>>>>> Stashed changes
     }
   };
 
@@ -198,12 +195,8 @@ export const LanguageProvider = ({ children }) => {
     toggleLanguage,
     t,
     isIndonesian: language === 'id',
-<<<<<<< Updated upstream
     isEnglish: language === 'en',
     isChinese: language === 'zh'
-=======
-    isEnglish: language === 'en'
->>>>>>> Stashed changes
   };
 
   return (

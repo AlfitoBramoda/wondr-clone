@@ -181,17 +181,12 @@ const Navigation = () => {
               <div className="flex items-center divide-x divide-[#7A7A7A] pl-8 py-6">
                 <button 
                   onClick={() => changeLanguage('id')}
-<<<<<<< Updated upstream
                   className={`text-sm leading-[24px] font-semibold px-2 ${language === 'id' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
-=======
-                  className={`text-sm leading-[24px] font-semibold pe-2 ${language === 'id' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
->>>>>>> Stashed changes
                 >
                   ID
                 </button>
                 <button 
                   onClick={() => changeLanguage('en')}
-<<<<<<< Updated upstream
                   className={`text-sm leading-[24px] font-semibold px-2 ${language === 'en' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
                 >
                   EN
@@ -202,12 +197,6 @@ const Navigation = () => {
                 >
                   中文
                 </button>
-=======
-                  className={`text-sm leading-[24px] font-semibold ps-2 ${language === 'en' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
-                >
-                  EN
-                </button>
->>>>>>> Stashed changes
               </div>
             </div>
           )}
@@ -278,17 +267,12 @@ const Navigation = () => {
                 <div className="flex items-center divide-x divide-[#7A7A7A]">
                   <button 
                     onClick={() => changeLanguage('id')}
-<<<<<<< Updated upstream
                     className={`text-[16px] leading-[24px] font-semibold px-2 ${language === 'id' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
-=======
-                    className={`text-[16px] leading-[24px] font-semibold pe-2 ${language === 'id' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
->>>>>>> Stashed changes
                   >
                     ID
                   </button>
                   <button 
                     onClick={() => changeLanguage('en')}
-<<<<<<< Updated upstream
                     className={`text-[16px] leading-[24px] font-semibold px-2 ${language === 'en' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
                   >
                     EN
@@ -299,12 +283,6 @@ const Navigation = () => {
                   >
                     中文
                   </button>
-=======
-                    className={`text-[16px] leading-[24px] font-semibold ps-2 ${language === 'en' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
-                  >
-                    EN
-                  </button>
->>>>>>> Stashed changes
                 </div>
               </div>
             </div>

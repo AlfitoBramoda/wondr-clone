@@ -7,7 +7,6 @@ import Footer from '@/components/footer';
 import UspSection from '@/components/fitur/UspSection'
 import Faq from '@/components/fitur/FaqComponent'
 import AdsComponent from '@/components/fitur/AdsComponent'
-import Footer from '@/components/footer'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 
@@ -54,6 +53,7 @@ export default function Transfer() {
                 <UspSection data={uspData} />
                 <CarouselTutorial/>
                 <Faq data={faqData}/>
+                <AdsComponent/>
                 <Footer/>
             </>
         )
