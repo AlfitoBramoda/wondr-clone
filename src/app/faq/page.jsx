@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Navbar from '../../components/Navbar';
 
 // Helper component for individual FAQ items
+// This is the updated FaqItem component with the requested transitions.
 const FaqItem = ({ item, isOpen, onClick }) => (
   <div className="border-b border-[#D0DDDE]">
     <h2>
@@ -13,28 +14,29 @@ const FaqItem = ({ item, isOpen, onClick }) => (
         onClick={onClick}
         aria-expanded={isOpen}
       >
-        <span className="text-base md:text-xl">{item.question}</span>
+        <span className="text-base md:text-xl font-semibold text-[#141414]">{item.question}</span>
         {/*
-          NOTE: Replaced next/image with a standard <img> tag to use external image URLs
-          without causing a "unconfigured host" error. The recommended production approach
-          is to configure the hostname in next.config.js.
+          NOTE: The icon now includes the conditional 'rotate-180' class for animation.
         */}
         <img
           loading="lazy"
           src={isOpen ? "https://wondr.bni.co.id/assets/images/svg/minus.png" : "https://wondr.bni.co.id/assets/images/svg/plus.png"}
-          className="w-8 h-8 md:w-12 md:h-12 transition-transform duration-300"
+          className={`w-8 h-8 md:w-12 md:h-12 transition-transform duration-300 ease-in-out ${
+            isOpen ? "rotate-180" : "rotate-0"
+          }`}
           alt="toggle"
         />
       </button>
     </h2>
+    {/*
+      NOTE: The answer panel now uses the max-h and opacity transition for a smooth slide-down effect.
+    */}
     <div
-      className={`grid transition-all duration-500 ease-in-out ${
-        isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+      className={`transition-all duration-300 ease-in-out overflow-hidden ${
+        isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
       }`}
     >
-      <div className="overflow-hidden">
-        <div className="pb-4 font-light text-sm md:text-base text-[#8C8C8C]" dangerouslySetInnerHTML={{ __html: item.answer }} />
-      </div>
+      <div className="pb-4 text-sm md:text-base text-[#8C8C8C] leading-normal" dangerouslySetInnerHTML={{ __html: item.answer }} />
     </div>
   </div>
 );
