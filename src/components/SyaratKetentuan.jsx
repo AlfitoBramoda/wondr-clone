@@ -238,6 +238,8 @@ export default function SyaratKetentuan() {
 
                 <p><span className="text-[#1b1c1d]">ii. </span><strong className="text-[#1b1c1d]">Transfer Terjadwal</strong>{' '}<span className="text-[#1b1c1d]"> adalah proses pengiriman uang (</span><em className="text-[#1b1c1d]">transfer</em><span className="text-[#1b1c1d]">) yang dijalankan secara otomatis oleh </span><em className="text-[#1b1c1d]">system</em><span className="text-[#1b1c1d]"> pada hari/tanggal tertentu sebesar nominal yang ditetapkan oleh Nasabah saat pendaftaran transfer terjadwal.</span></p>
                 
+                <p><br /></p>
+
                 <p>
                     <strong className="text-[#1b1c1d]">
                     2. KETENTUAN UMUM KEANGGOTAAN
@@ -290,6 +292,8 @@ export default function SyaratKetentuan() {
                     c. Pengguna telah membaca, memahami, dan menyetujui Syarat dan Ketentuan ini.
                 </p>
 
+                <p><br /></p>
+
                 <h2 className="font-bold text-lg">4. REGISTRASI APLIKASI WONDR BY BNI</h2>
                 <p>a. Registrasi Aplikasi wondr by BNI hanya dapat dilakukan melalui Aplikasi wondr by BNI yang telah diunduh pada <em>Smartphone</em> Nasabah, untuk itu Nasabah wajib terlebih dahulu mengunduh Aplikasi wondr by BNI pada <em>Smartphone</em> miliknya.</p>
                 <p>b. Nasabah wajib menggunakan aplikasi resmi dari Aplikasi wondr by BNI yang disediakan oleh Bank pada Google Play dan Appstore.</p>
@@ -330,6 +334,8 @@ export default function SyaratKetentuan() {
                 <p>j. Pengguna wajib menjaga <em>Smartphone</em> dari aplikasi berbahaya seperti <em>virus, malware, trojan</em>, dan tidak memodifikasi perangkat (<em>jailbreak</em> atau <em>rooted</em>).</p>
                 <p>k. Jika <em>Smartphone</em> hilang atau ada perubahan nomor/email, wajib lapor ke BNI Call atau Command Centre.</p>
                 <p>l. Kerugian akibat aplikasi berbahaya di <em>Smartphone</em> adalah tanggung jawab Nasabah sepenuhnya.</p>
+
+                <p><br /></p>
 
                 <h2 className="font-bold text-lg">6. KEAMANAN DATA PRIBADI</h2>
                 <p>
@@ -413,6 +419,8 @@ export default function SyaratKetentuan() {
                     n. Pengguna dengan ini memberikan kuasa kepada Bank untuk mendebet rekening Pengguna yang terdaftar di Bank untuk melaksanakan Transaksi Finansial 
                     yang diinstruksikan oleh Pengguna kepada Bank melalui Aplikasi wondr by BNI dan untuk pembayaran biaya administrasi serta biaya transaksi atas penggunaan Aplikasi wondr by BNI.
                 </p>
+
+                <p><br /></p>
 
                 <h2 className="font-bold text-lg">8. KETENTUAN PEMBUKAAN DAN PENGGUNAAN REKENING</h2>
 

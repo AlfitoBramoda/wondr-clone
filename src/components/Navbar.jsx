@@ -373,7 +373,7 @@ const Navigation = () => {
                       </div>
                       <div className="px-4 py-2 mt-4">
                         <Link
-                          href="/legal/privacy-policy"
+                          href="/detail/legal"
                           className="text-[#FF8736] text-sm font-bold flex items-center gap-1 hover:underline"
                         >
                           {t('navbar.legal.viewMore')}
