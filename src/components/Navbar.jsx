@@ -2,12 +2,15 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(null);
   const [activeDesktopTab, setActiveDesktopTab] = useState(null);
   const [expandedMobileSection, setExpandedMobileSection] = useState(null);
+  
+  const { language, setLanguage, t } = useLanguage();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -25,27 +28,31 @@ const Navigation = () => {
     setActiveTab(activeTab === tab ? null : tab);
   };
 
+  const changeLanguage = (newLanguage) => {
+    setLanguage(newLanguage);
+  };
+
   const menuItems = {
     transaksi: [
-      { name: 'Transfer', href: '/detail/transfer' },
-      { name: 'Bayar & Beli', href: '/detail/bayar-beli' },
-      { name: 'TapCash', href: '/detail/tapcash' },
-      { name: 'Transfer Luar Negeri', href: '/detail/remittance' },
-      { name: 'Mobile Tunai', href: '/detail/mobile-tunai' }
+      { name: t('navbar.menu.transfer'), href: '/detail/transfer' },
+      { name: t('navbar.menu.payAndBuy'), href: '/detail/bayar-beli' },
+      { name: t('navbar.menu.tapcash'), href: '/detail/tapcash' },
+      { name: t('navbar.menu.internationalTransfer'), href: '/detail/remittance' },
+      { name: t('navbar.menu.mobileTunai'), href: '/detail/mobile-tunai' }
     ],
     simpanan: [
-      { name: 'wondr multicurrency', href: '/detail/multicurrency' }
+      { name: t('navbar.menu.multicurrency'), href: '/detail/multicurrency' }
     ],
     investasi: [
-      { name: 'Reksa Dana', href: '/detail/reksa-dana' },
-      { name: 'Obligasi/Sukuk', href: '/detail/obligasi' }
+      { name: t('navbar.menu.mutualFunds'), href: '/detail/reksa-dana' },
+      { name: t('navbar.menu.bonds'), href: '/detail/obligasi' }
     ],
     lainnya: [
-      { name: 'Registrasi & Referral', href: '/detail/lainya' }
+      { name: t('navbar.menu.registration'), href: '/detail/lainya' }
     ]
   };
 
-  const faqItems = [
+  const faqItems = t('navbar.faq.questions') || [
     'Metode transfer apa saja yang bisa dipilih?',
     'Di mana saya bisa bertransaksi menggunakan QRIS?',
     'Apakah terdapat biaya transaksi saat menggunakan fitur Bayar & Beli?'
@@ -71,7 +78,7 @@ const Navigation = () => {
                 type="button"
                 className="px-6 py-[9px] text-xs text-black font-semibold focus:outline-none bg-[#71DBD3] hover:bg-[#5CCFC5] disabled:bg-[#A7ECE8] rounded-[32px]"
               >
-                Download Sekarang
+                {t('navbar.downloadNow')}
               </button>
               <button onClick={toggleMobileMenu}>
                 <img
@@ -95,7 +102,7 @@ const Navigation = () => {
                   }`}
                   onClick={() => handleMobileTab('fitur')}
                 >
-                  Fitur
+                  {t('navbar.features')}
                 </button>
                 <button
                   className={`text-black w-full flex-1 font-semibold text-sm py-[18px] px-12 border-b-[4px] cursor-pointer transition-all duration-500 origin-top text-center flex items-center justify-center gap-2 ${
@@ -103,7 +110,7 @@ const Navigation = () => {
                   }`}
                   onClick={() => handleMobileTab('info')}
                 >
-                  Info
+                  {t('navbar.info')}
                 </button>
               </div>
 
@@ -118,7 +125,7 @@ const Navigation = () => {
                           role="button"
                           tabIndex={0}
                         >
-                          <p className="font-semibold text-base capitalize">{section}</p>
+                          <p className="font-semibold text-base capitalize">{t(`navbar.sections.${section}`)}</p>
                           <button className="w-8 h-8 bg-[#71DBD3] rounded-full flex items-center justify-center">
                             <svg
                               className={`w-4 h-4 transition-transform duration-500 ${
@@ -153,7 +160,7 @@ const Navigation = () => {
                 {activeTab === 'info' && (
                   <div className="p-4">
                     <div className="mb-6">
-                      <h3 className="font-semibold text-lg mb-4">FAQ</h3>
+                      <h3 className="font-semibold text-lg mb-4">{t('navbar.faq.title')}</h3>
                       <div className="space-y-3">
                         {faqItems.map((item, index) => (
                           <div key={index} className="flex items-start space-x-3">
@@ -164,16 +171,26 @@ const Navigation = () => {
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-4">Syarat, Ketentuan, dan Pemberitahuan Privasi</h3>
-                      <p className="text-gray-600 text-sm mb-4">Cek syarat, ketentuan, dan pemberitahuan privasi</p>
+                      <h3 className="font-semibold text-lg mb-4">{t('navbar.legal.title')}</h3>
+                      <p className="text-gray-600 text-sm mb-4">{t('navbar.legal.description')}</p>
                     </div>
                   </div>
                 )}
               </div>
 
               <div className="flex items-center divide-x divide-[#7A7A7A] pl-8 py-6">
-                <button className="text-sm leading-[24px] font-semibold pe-2 text-[#141414]">ID</button>
-                <button className="text-sm leading-[24px] font-semibold ps-2 text-[#8c8c8c]">EN</button>
+                <button 
+                  onClick={() => changeLanguage('id')}
+                  className={`text-sm leading-[24px] font-semibold pe-2 ${language === 'id' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
+                >
+                  ID
+                </button>
+                <button 
+                  onClick={() => changeLanguage('en')}
+                  className={`text-sm leading-[24px] font-semibold ps-2 ${language === 'en' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
+                >
+                  EN
+                </button>
               </div>
             </div>
           )}
@@ -198,7 +215,7 @@ const Navigation = () => {
                     }`}
                     onClick={() => handleDesktopTab('fitur')}
                   >
-                    <span>Fitur</span>
+                    <span>{t('navbar.features')}</span>
                     <svg
                       className={`w-4 h-4 transition-transform duration-500 ${
                         activeDesktopTab === 'fitur' ? 'rotate-180' : ''
@@ -217,7 +234,7 @@ const Navigation = () => {
                     }`}
                     onClick={() => handleDesktopTab('info')}
                   >
-                    <span>Info</span>
+                    <span>{t('navbar.info')}</span>
                     <svg
                       className={`w-4 h-4 transition-transform duration-500 ${
                         activeDesktopTab === 'info' ? 'rotate-180' : ''
@@ -238,12 +255,22 @@ const Navigation = () => {
                 type="button"
                 className="px-6 py-[9px] text-base text-black font-semibold focus:outline-none bg-[#71DBD3] hover:bg-[#5CCFC5] disabled:bg-[#A7ECE8] rounded-[32px]"
               >
-                Download Sekarang
+                {t('navbar.downloadNow')}
               </button>
               <div className="flex items-center space-x-1">
                 <div className="flex items-center divide-x divide-[#7A7A7A]">
-                  <button className="text-[16px] leading-[24px] font-semibold pe-2 text-[#141414]">ID</button>
-                  <button className="text-[16px] leading-[24px] font-semibold ps-2 text-[#8c8c8c]">EN</button>
+                  <button 
+                    onClick={() => changeLanguage('id')}
+                    className={`text-[16px] leading-[24px] font-semibold pe-2 ${language === 'id' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
+                  >
+                    ID
+                  </button>
+                  <button 
+                    onClick={() => changeLanguage('en')}
+                    className={`text-[16px] leading-[24px] font-semibold ps-2 ${language === 'en' ? 'text-[#141414]' : 'text-[#8c8c8c]'}`}
+                  >
+                    EN
+                  </button>
                 </div>
               </div>
             </div>
@@ -260,7 +287,7 @@ const Navigation = () => {
                       className={`bg-white p-6 rounded-lg shadow-sm transition-transform duration-500 flex flex-col text-black ${section === 'lainnya' ? 'justify-between' : 'after:content-[\'\'] after:block after:h-[120px]'}`}
                     >
                       <div>
-                        <h3 className="font-semibold text-base mb-6 capitalize">{section}</h3>
+                        <h3 className="font-semibold text-base mb-6 capitalize">{t(`navbar.sections.${section}`)}</h3>
                         <ul className="flex flex-col list-none text-base font-light">
                           {items.map((item, index) => (
                             <li key={index}>
@@ -296,7 +323,7 @@ const Navigation = () => {
               <div className="block w-full py-6 px-6 lg:px-[150px] overflow-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8">
                   <div className="bg-white p-6 rounded-lg shadow-sm transition-transform duration-500 flex flex-col">
-                    <h3 className="font-semibold text-black text-2xl">FAQ</h3>
+                    <h3 className="font-semibold text-black text-2xl">{t('navbar.faq.title')}</h3>
                     <ul className="flex flex-col gap-5 ml-[2px] text-[#7A7A7A] text-base font-light mt-4">
                       {faqItems.map((item, index) => (
                         <li key={index} className="flex gap-3 items-start">
@@ -310,7 +337,7 @@ const Navigation = () => {
                         href="/faq"
                         className="text-[#FF8736] text-sm font-bold flex items-center gap-1 hover:underline"
                       >
-                        Lihat Selengkapnya
+                        {t('navbar.faq.viewMore')}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="w-4 h-4"
@@ -327,9 +354,9 @@ const Navigation = () => {
                   <div className="flex flex-col gap-4">
                     <div className="bg-white p-6 rounded-lg shadow-sm transition-transform duration-500 flex flex-col justify-between">
                       <div>
-                        <h2 className="font-semibold text-black text-2xl">Syarat, Ketentuan, dan Pemberitahuan Privasi</h2>
+                        <h2 className="font-semibold text-black text-2xl">{t('navbar.legal.title')}</h2>
                         <p className="text-[#7A7A7A] text-[14px] font-light mt-2">
-                          Cek syarat, ketentuan, dan pemberitahuan privasi
+                          {t('navbar.legal.description')}
                         </p>
                       </div>
                       <div className="px-4 py-2 mt-4">
@@ -337,7 +364,7 @@ const Navigation = () => {
                           href="/legal/privacy-policy"
                           className="text-[#FF8736] text-sm font-bold flex items-center gap-1 hover:underline"
                         >
-                          Lihat Selengkapnya
+                          {t('navbar.legal.viewMore')}
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-4 h-4"
