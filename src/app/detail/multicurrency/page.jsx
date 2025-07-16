@@ -1,8 +1,10 @@
 'use client'
 
 import Navbar from '@/components/Navbar'
+import { ObligasiAds } from '@/components/detailObligasi/ObligasiAds'
 import CarouselTutorial from '@/components/fitur/carouselTutorial'
 import Hero from '@/components/fitur/hero'
+import Footer from '@/components/footer'
 
 export default function Multicurrency() {
     return (
@@ -15,6 +17,8 @@ export default function Multicurrency() {
                 text3='Cukup satu tabungan, bisa transaksi untuk 12 valuta asing.'/>
 
                 <CarouselTutorial />
+                <ObligasiAds />
+                <Footer />
         </>
     )
 }

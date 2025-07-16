@@ -53,3 +53,22 @@ body {
   }
 }
 
+.bg-turqoise-highlight {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 244 241/var(--tw-bg-opacity))
+}
+
+.text-granite {
+  --tw-text-opacity: 1;
+  color: rgb(122 122 122 / var(--tw-text-opacity));
+}
+
+.text-charcoal-gray {
+  --tw-text-opacity: 1;
+  color: rgb(78 78 78 / var(--tw-text-opacity));
+}
+
+.text-neutral-900 {
+  --tw-text-opacity: 1;
+  color: rgb(20 20 20 / var(--tw-text-opacity));
+}
