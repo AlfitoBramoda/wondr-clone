@@ -1,6 +1,48 @@
+'use client'
+
+import { useLanguage } from '@/contexts/LanguageContext';
+
 export default function Hero({ image, text1, text2, text3 }) {
+    const { language, setLanguage } = useLanguage();
+
     return (
-        <div className="w-full bg-turqoise-highlight flex flex-col-reverse md:flex-row gap-6 max-w-screen mx-auto lg:max-h-[510px] 2xl:max-h-[80vh]">
+        <div className="w-full bg-turqoise-highlight flex flex-col-reverse md:flex-row gap-6 max-w-screen mx-auto lg:max-h-[510px] 2xl:max-h-[80vh] relative">
+            {/* Language Switcher Button - Header */}
+            {/* <div className="absolute top-4 right-4 md:top-6 md:right-6 z-10">
+                <div className="flex items-center bg-white/90 backdrop-blur-sm rounded-full p-1 shadow-lg">
+                    <button 
+                        onClick={() => setLanguage('id')}
+                        className={`px-3 py-2 text-sm font-semibold rounded-full transition-all duration-200 ${
+                            language === 'id' 
+                                ? 'bg-[#71DBD3] text-black' 
+                                : 'text-gray-600 hover:text-black'
+                        }`}
+                    >
+                        ID
+                    </button>
+                    <button 
+                        onClick={() => setLanguage('en')}
+                        className={`px-3 py-2 text-sm font-semibold rounded-full transition-all duration-200 ${
+                            language === 'en' 
+                                ? 'bg-[#71DBD3] text-black' 
+                                : 'text-gray-600 hover:text-black'
+                        }`}
+                    >
+                        EN
+                    </button>
+                    <button 
+                        onClick={() => setLanguage('zh')}
+                        className={`px-3 py-2 text-sm font-semibold rounded-full transition-all duration-200 ${
+                            language === 'zh' 
+                                ? 'bg-[#71DBD3] text-black' 
+                                : 'text-gray-600 hover:text-black'
+                        }`}
+                    >
+                        中文
+                    </button>
+                </div>
+            </div> */}
+
             <div className="w-full md:w-[48.47%] flex flex-col justify-end items-end">
                 <img
                 alt="banner"
