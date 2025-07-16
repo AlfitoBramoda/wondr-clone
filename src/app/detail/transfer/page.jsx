@@ -1,4 +1,7 @@
+'use client'
+
 import Navbar from '@/components/Navbar'
+import CarouselTutorial from '@/components/fitur/carouselTutorial'
 import Hero from '@/components/fitur/hero'
 
 export default function Transfer() {
@@ -10,8 +13,7 @@ export default function Transfer() {
                 text1='Transfer' 
                 text2='Tagihan apapun semuanya serba ada!' 
                 text3='Dari token listrik sampai bayar tagihan pendidikan kuliah semuanya komplit.'/>
-
-            
+            <CarouselTutorial/>
         </>
     )
 }

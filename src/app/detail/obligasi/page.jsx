@@ -12,6 +12,7 @@ import { ObligasiSimulation } from '@/components/detailObligasi/ObligasiSimulati
 import { ObligasiAds } from '@/components/detailObligasi/ObligasiAds';
 import Footer from '@/components/footer';
 import { ObligasiFaq } from '@/components/detailObligasi/ObligasiFaq';
+import CarouselTutorial from '@/components/fitur/carouselTutorial';
 
 export default function Obligasi() {
   const instruments = [
@@ -124,7 +125,7 @@ export default function Obligasi() {
 
       <ObligasiSimulation />
 
-      {/* OBLIGASI CAROUSE STEP -- NOT YET */}
+      <CarouselTutorial />
 
       <ObligasiFaq />
       <ObligasiAds />

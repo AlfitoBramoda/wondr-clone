@@ -15,7 +15,7 @@ export default function Hero({ image, text1, text2, text3 }) {
                 />
             </div>
             <div className="w-full md:w-[49.86%] flex flex-col justify-center gap-2 md:gap-1 xl:gap-6 px-6 lg:py-10 xl:py-0 text-center md:text-left mt-8 md:mt-0 md:pr-10">
-                <div className="text-base md:text-2xl font-light text-black">
+                <div className="text-base md:text-2xl font-light text-granite md:text-charcoal-gray">
                 {text1}
                 </div>
                 <h2 className=" text-3xl md:text-4xl lg:text-5xl xl:text-[64px] !leading-snug lg:!leading-tight text-black left font-demibold text-neutral-900 font-bold xl:!leading-[120%] max-w-[598px] ">
