@@ -1,8 +1,10 @@
 'use client'
 
 import Navbar from '@/components/Navbar'
+import { ObligasiAds } from '@/components/detailObligasi/ObligasiAds'
 import CarouselTutorial from '@/components/fitur/carouselTutorial'
 import Hero from '@/components/fitur/hero'
+import Footer from '@/components/footer'
 
 export default function MobileTunai() {
     return (
@@ -15,6 +17,8 @@ export default function MobileTunai() {
                 text3='Dompet ketinggalan gak jadi halangan. Dengan wondr, tarik tunai bisa tanpa kartu.'/>
 
                 <CarouselTutorial />
+                <ObligasiAds />
+                <Footer />
         </>
     )
 }
