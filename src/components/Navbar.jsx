@@ -10,7 +10,7 @@ const Navigation = () => {
   const [activeDesktopTab, setActiveDesktopTab] = useState(null);
   const [expandedMobileSection, setExpandedMobileSection] = useState(null);
   
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage, t, isClient } = useLanguage();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -31,6 +31,10 @@ const Navigation = () => {
   const changeLanguage = (newLanguage) => {
     setLanguage(newLanguage);
   };
+
+  if (!isClient) {
+    return null;
+  }
 
   const menuItems = {
     transaksi: [
