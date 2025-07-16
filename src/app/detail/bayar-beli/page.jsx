@@ -7,6 +7,7 @@ import UspSection from '@/components/fitur/UspSection'
 
 export default function BayarBeli() {
     let uspData = {
+        title: 'Nikmati berbagai macam fitur Bayar Beli!',
         left: {
             image: 'https://wondr.bni.co.id/assets/images/usp/uspbayar-beli1.svg',
             title: 'Bayar tagihan makin sat-set',
@@ -32,7 +33,7 @@ export default function BayarBeli() {
                 text2='Tagihan apa aja semuanya ada' 
                 text3='Bayar listrik, air, internet, beli pulsa, dan bayar tagihan lainnya jadi praktis.'/>
             
-            <UspSection title='Nikmati berbagai macam fitur Bayar Beli!' data={uspData} />
+            <UspSection data={uspData} />
 
             <CarouselTutorial />
         </>
