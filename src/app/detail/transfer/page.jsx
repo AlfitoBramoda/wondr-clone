@@ -8,6 +8,8 @@ import Hero from '@/components/fitur/hero'
 import Footer from '@/components/footer';
 import UspSection from '@/components/fitur/UspSection'
 import Faq from '@/components/fitur/FaqComponent'
+import AdsComponent from '@/components/fitur/AdsComponent'
+import Footer from '@/components/footer'
 
 export default function Transfer() {
     const uspData = {
@@ -39,11 +41,6 @@ export default function Transfer() {
         id: 1,
         question: "Metode transfer apa saja yang bisa dipilih?",
         answer: "Kamu bisa beli Reksa Dana dan Obligasi lewat wondr. Reksa Dana adalah investasi dalam portofolio efek oleh Manajer Investasi (MI) yang mendapat izin dari Otoritas Jasa Keuangan (OJK). Sementara, Obligasi adalah surat utang jangka menengah maupun jangka panjang yang dapat diperjualbelikan."
-    },
-    {
-        id: 2,
-        question: "Berapa lama waktu pendaftarannya?",
-        answer: "Setelah kamu konfirmasi beberapa data, hanya butuh maksimum 1 hari kerja sampai kamu bisa mulai investasi di wondr."
     }
     ];
     return (
@@ -52,15 +49,13 @@ export default function Transfer() {
             <Hero 
                 image="https://wondr.bni.co.id/api/image/transfer_1751639831872.png" 
                 text1='Transfer' 
-                text2='Tagihan apapun semuanya serba ada!' 
-                text3='Dari token listrik sampai bayar tagihan pendidikan kuliah semuanya komplit.'/>
-            <USPTransferSection/>
-            <CarouselTutorial/>
-            <FaqTransfer/>
-            <Footer/>
+                text2='Kirim uang ke seluruh Indonesia, aman dan instan' 
+                text3='Transfer ke mana aja cuma dalam hitungan detik.'/>
             <UspSection data={uspData} />
             <CarouselTutorial/>
             <Faq data={faqData}/>
+            <AdsComponent />
+            <Footer />
         </>
     )
 }
