@@ -18,14 +18,24 @@ function Home() {
     <div>
       <Navbar />
       <Carousel />
-      <Insight/>
-      <PromoSection/>
       <Card/>
       <Swiper/>
-      <SectionPromo/>
+      <Insight/>
       <SectionMotion/>
       <LoanCard />
       <RegisterAds />
+      <PromoSection/>
+
+      {/* 
+      <SectionMotion/>
+      <Swiper/>
+      <SectionPromo/>
+      <PromoSection/>
+      <Insight/>
+      <LoanCard />
+      <RegisterAds /> 
+      */}
+
       <Footer/>
     </div>
   );
