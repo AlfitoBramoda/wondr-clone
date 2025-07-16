@@ -135,7 +135,7 @@ export default function Footer() {
             © Hak Cipta 2025 PT. Bank Negara Indonesia (Persero), Tbk.
           </p>
           <div className="flex gap-4 text-xs underline text-[#8C8C8C] text-center">
-            <Link href="/legal/privacy-policy" className="hover:text-black">
+            <Link href="/detail/legal" className="hover:text-black">
               Kebijakan Privasi
             </Link>
             <a
