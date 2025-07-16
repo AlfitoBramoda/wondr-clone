@@ -2,6 +2,8 @@
 
 import Navbar from '@/components/Navbar'
 import CarouselTutorial from '@/components/fitur/carouselTutorial'
+import { FaqTransfer } from '@/components/detailTransfer/FaqTransfer'
+import USPTransferSection from '@/components/detailTransfer/USPTransferSection'
 import Hero from '@/components/fitur/hero'
 import Footer from '@/components/footer';
 
@@ -14,7 +16,9 @@ export default function Transfer() {
                 text1='Transfer' 
                 text2='Tagihan apapun semuanya serba ada!' 
                 text3='Dari token listrik sampai bayar tagihan pendidikan kuliah semuanya komplit.'/>
+            <USPTransferSection/>
             <CarouselTutorial/>
+            <FaqTransfer/>
             <Footer/>
         </>
     )
