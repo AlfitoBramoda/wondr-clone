@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel'; 
 import Insight from '@/components/insight';
 import PromoSection from '@/components/promo';
-import Faq from '@/components/Faq';
 import Swiper from '../components/SwiperCard';
 import Card from '../components/Card'
 import Footer from '@/components/footer';
