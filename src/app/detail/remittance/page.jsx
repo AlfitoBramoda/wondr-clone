@@ -1,6 +1,5 @@
 "use client";
 
-<<<<<<< Updated upstream
 import Navbar from "@/components/Navbar";
 import { ObligasiAds } from "@/components/detailObligasi/ObligasiAds";
 import Hero from "@/components/fitur/hero";
@@ -50,7 +49,6 @@ export default function Remittance() {
     </>
   );
 }
-=======
 import Navbar from '@/components/Navbar'
 import { ObligasiAds } from '@/components/detailObligasi/ObligasiAds'
 import Hero from '@/components/fitur/hero'
@@ -91,4 +89,3 @@ export default function Remittance() {
         </>
     )
 }
->>>>>>> Stashed changes
