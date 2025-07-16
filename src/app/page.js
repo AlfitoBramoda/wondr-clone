@@ -11,6 +11,7 @@ import Footer from '@/components/footer';
 import SectionPromo from '../components/SectionPromo';
 import LoanCard from '@/components/LoanCard';
 import RegisterAds from '@/components/RegisterAds';
+import SectionMotion from '../components/SectionMotion';
 function Home() {  
 
   return (
@@ -22,6 +23,7 @@ function Home() {
       <Card/>
       <Swiper/>
       <SectionPromo/>
+      <SectionMotion/>
       <LoanCard />
       <RegisterAds />
       <Footer/>
