@@ -117,6 +117,55 @@ export const LanguageProvider = ({ children }) => {
           flexible: { title: "Flexible transfer schedule", description: "Want to schedule or send to multiple people at once? You can!" }
         }
       }
+    },
+    zh: {
+      navbar: {
+        features: "功能",
+        info: "信息",
+        downloadNow: "立即下载",
+        sections: {
+          transaksi: "交易",
+          simpanan: "储蓄",
+          investasi: "投资",
+          lainnya: "其他"
+        },
+        menu: {
+          transfer: "转账",
+          payAndBuy: "支付与购买",
+          tapcash: "TapCash",
+          internationalTransfer: "国际转账",
+          mobileTunai: "移动现金",
+          multicurrency: "wondr 多币种",
+          mutualFunds: "共同基金",
+          bonds: "债券/伊斯兰债券",
+          registration: "注册与推荐"
+        },
+        faq: {
+          title: "常见问题",
+          questions: [
+            "我可以选择哪些转账方式？",
+            "我可以在哪里使用QRIS进行交易？",
+            "使用支付与购买功能时是否有交易费用？"
+          ],
+          viewMore: "查看更多"
+        },
+        legal: {
+          title: "条款、条件和隐私声明",
+          description: "查看条款、条件和隐私声明",
+          viewMore: "查看更多"
+        }
+      },
+      transfer: {
+        title: "转账",
+        subtitle: "所有支付需求一站式解决！",
+        description: "从电费充值到教育费用支付，应有尽有。",
+        usp: {
+          title: "随时随地转账，无忧便捷",
+          instant: { title: "即时安全", description: "通过可信的安全系统，您的资金将在几秒钟内发送。" },
+          multicurrency: { title: "支持多种货币", description: "除了印尼盾，BNI之间还可以发送其他12种货币。" },
+          flexible: { title: "灵活的转账时间安排", description: "想要设置时间表或同时向多人发送？完全可以！" }
+        }
+      }
     }
   };
 
@@ -146,7 +195,8 @@ export const LanguageProvider = ({ children }) => {
     toggleLanguage,
     t,
     isIndonesian: language === 'id',
-    isEnglish: language === 'en'
+    isEnglish: language === 'en',
+    isChinese: language === 'zh'
   };
 
   return (

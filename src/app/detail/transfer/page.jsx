@@ -51,6 +51,7 @@ export default function Transfer() {
                 <UspSection data={uspData} />
                 <CarouselTutorial/>
                 <Faq data={faqData}/>
+           
                 <Footer/>
             </>
         )
