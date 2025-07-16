@@ -144,7 +144,7 @@ const BNIFeaturesSwiper = () => {
       headline: "Kirim uang antarnegara dalam hitungan menit",
       description: "Transfer ke berbagai negara gak perlu nunggu lama. Bisa cek status pengiriman juga.",
       imageUrl: "https://wondr.bni.co.id/api/image/layer_4_1751485713019.png",
-      redirectUrl: "/detail/transfer-luar-negeri"
+      redirectUrl: "/detail/remittance"
     },
     {
       id: 5,
