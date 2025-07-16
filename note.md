@@ -5,3 +5,7 @@ Insight Cermat - Yuridh
 Pinjaman Fleksibel - Jendral
 Lebih Banyak Promo - Yuridh
 Footer - Aulia
+
+
+**Library**
+Swiper
