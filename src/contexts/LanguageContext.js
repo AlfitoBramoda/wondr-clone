@@ -14,6 +14,11 @@ export const useLanguage = () => {
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState('id');
+  const [isClient, setIsClient] = useState(false);
+
+  React.useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'id' ? 'en' : 'id');
@@ -194,6 +199,7 @@ export const LanguageProvider = ({ children }) => {
     setLanguage,
     toggleLanguage,
     t,
+    isClient,
     isIndonesian: language === 'id',
     isEnglish: language === 'en',
     isChinese: language === 'zh'
