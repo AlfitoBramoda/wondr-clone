@@ -2,7 +2,7 @@ export default function UspSection({data}) {
     return (
         <div className="usp-section">
             <div className="container-120 mt-6 md:mt-[72px] mb-6 md:mb-9">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-[40px] !leading-snug lg:!leading-tight text-neutral-900 text-center font-demibold">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-[40px] leading-snug lg:leading-tight text-neutral-900 text-center font-semibold">
                 {data.title}
                 </h2>
                 <div className="grid md:grid-cols-3 md:mt-10 w-full place-items-center">
