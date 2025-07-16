@@ -14,13 +14,8 @@ function Carousel() {
     },
     {
       id: 2,
-      image: "https://wondr.bni.co.id/_next/image?url=%2Fapi%2Fimage%2Fbanner_1_1751643019762.png&w=1920&q=75", // Gunakan gambar yang sama atau ganti dengan banner2.png jika ada
+      image: "https://wondr.bni.co.id/_next/image?url=%2Fapi%2Fimage%2Fbanner_2_1751643120295.png&w=1920&q=75", // Gunakan gambar yang sama atau ganti dengan banner2.png jika ada
       alt: "Banner 2 - Promo Special"
-    },
-    {
-      id: 3,
-      image: "https://wondr.bni.co.id/_next/image?url=%2Fapi%2Fimage%2Fbanner_1_1751643019762.png&w=1920&q=75", // Gunakan gambar yang sama atau ganti dengan banner3.png jika ada
-      alt: "Banner 3 - Wandr Premium"
     }
   ];
 
