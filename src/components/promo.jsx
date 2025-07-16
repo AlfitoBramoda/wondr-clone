@@ -1,7 +1,7 @@
-"use client"; // This component uses Swiper.js, which requires it to be a Client Component.
+"use client"; 
 
 import React from 'react';
-// Import Swiper React components
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 
@@ -9,9 +9,55 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import { ChevronLeft, ChevronRight} from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-// --- Data for Promo Cards ---
+function PromoCarousel({ promos }) {
+  return (
+    <div>
+      {/* Swiper Carousel */}
+      <div className="swiper mt-6 md:mt-8 flex items-center">
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={0} 
+          slidesPerView={'auto'}
+          loop={false}
+          speed={1500}
+          navigation={{
+            nextEl: '.swiper-button-next-custom',
+            prevEl: '.swiper-button-prev-custom',
+          }}
+          className="!pl-0"
+        >
+          {promos.map((promo) => (
+            <SwiperSlide key={promo.id} className="!w-auto">
+              {/* This div now controls the responsive width of the carousel items */}
+              <div className="pr-4 md:pr-10 w-[68.5vw] sm:w-[72vw] md:w-[74vw] lg:w-[41vw] xl:w-[34.4vw]">
+                <a href={promo.href} target="_blank" rel="noopener noreferrer" className="block">
+                  <img
+                    src={promo.src}
+                    alt={promo.alt}
+                    className="w-full h-full object-cover rounded-xl"
+                  />
+                </a>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      {/* Custom Navigation Buttons */}
+      <div className="flex gap-6 lg:justify-between pr-6 mt-6 justify-end">
+        <button className="swiper-button-prev-custom bg-[#71DBD3] hover:bg-[#5CCFC5] flex justify-center items-center rounded-full w-8 h-8 md:w-12 md:h-12 z-10 cursor-pointer transition-colors">
+          <ChevronLeft className="w-6 h-6 text-black" />
+        </button>
+        <button className="swiper-button-next-custom bg-[#71DBD3] hover:bg-[#5CCFC5] flex justify-center items-center rounded-full w-8 h-8 md:w-12 md:h-12 z-10 cursor-pointer transition-colors">
+          <ChevronRight className="w-6 h-6 text-black" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 const promos = [
   {
     id: 1,
@@ -59,17 +105,17 @@ export default function PromoSection() {
         alt="right-decor"
         className="absolute -right-4 top-10 sm:top-12 md:top-16 w-12 sm:w-16 lg:w-auto z-10"
       />
-      
+
       <div className="max-w-7xl mx-auto items-center px-4 sm:px-6 lg:px-0">
         <div className="bg-[#F9F9F9] pl-6 pt-6 md:pl-10 md:pt-10 rounded-t-[32px] h-full relative overflow-visible">
-          
+
           {/* Header */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pr-6 text-center md:text-left">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] !leading-snug lg:!leading-tight text-black text-center font-semibold md:text-left">
               Lebih banyak promo di wondr!
             </h2>
             <div className="flex justify-center items-center w-full md:w-auto">
-               <a
+              <a
                 href="https://bniexperience.bni.co.id/wondr"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -80,57 +126,17 @@ export default function PromoSection() {
             </div>
           </div>
 
-          {/* Swiper Carousel */}
-          <div>
-            <div className="swiper mt-6 md:mt-8 flex items-center">
-              <Swiper
-                modules={[Navigation]}
-                spaceBetween={0} // Space is now handled by padding inside the slide
-                slidesPerView={'auto'}
-                loop={false}
-                speed={1500}
-                navigation={{
-                  nextEl: '.swiper-button-next-custom',
-                  prevEl: '.swiper-button-prev-custom',
-                }}
-                className="!pl-0" 
-              >
-                {promos.map((promo) => (
-                  <SwiperSlide key={promo.id} className="!w-auto">
-                    {/* This div now controls the responsive width of the carousel items */}
-                    <div className="pr-4 md:pr-10 w-[68.5vw] sm:w-[72vw] md:w-[74vw] lg:w-[41vw] xl:w-[34.4vw]">
-                      <a href={promo.href} target="_blank" rel="noopener noreferrer" className="block">
-                        <img 
-                          src={promo.src} 
-                          alt={promo.alt} 
-                          className="w-full h-full object-cover rounded-xl"
-                        />
-                      </a>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-            
-            {/* Custom Navigation Buttons */}
-             <div className="flex gap-6 lg:justify-between pr-6 mt-6 justify-end">
-                <button className="swiper-button-prev-custom bg-[#71DBD3] hover:bg-[#5CCFC5] flex justify-center items-center rounded-full w-8 h-8 md:w-12 md:h-12 z-10 cursor-pointer transition-colors">
-                    <ChevronLeft className="w-6 h-6 text-black" />
-                </button>
-                <button className="swiper-button-next-custom bg-[#71DBD3] hover:bg-[#5CCFC5] flex justify-center items-center rounded-full w-8 h-8 md:w-12 md:h-12 z-10 cursor-pointer transition-colors">
-                    <ChevronRight className="w-6 h-6 text-black" />
-                </button>
-            </div>
-          </div>
+          <PromoCarousel promos={promos} />
+
         </div>
-        
-        {/* Bottom Wave SVG */}
+
+
         <div className="max-w-[990px] mx-auto lg:max-w-full overflow-hidden flex justify-center">
-            <img
-              src="https://wondr.bni.co.id/assets/images/svg/subtract.svg"
-              alt="promo-bottom"
-              className="object-cover object-center w-[990px] lg:w-full max-w-none"
-            />
+          <img
+            src="https://wondr.bni.co.id/assets/images/svg/subtract.svg"
+            alt="promo-bottom"
+            className="object-cover object-center w-[990px] lg:w-full max-w-none"
+          />
         </div>
       </div>
     </section>
