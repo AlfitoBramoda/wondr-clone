@@ -52,34 +52,34 @@ export function ObligasiFaq() {
                 key={faq.id} 
                 className={`faq-item ${index < faqData.length - 1 ? 'border-b border-[#D0DDDE]' : ''}`}
               >
-                {/* FAQ Question */}
-                <h5 id={`accordion-open-heading-${faq.id}`}>
-                  <button
-                    type="button"
-                    className="flex items-center justify-between w-full py-4 padding-bottom-faq font-medium rtl:text-right gap-2 md:gap-3"
-                    aria-expanded={openFaq === faq.id}
-                    aria-controls={`accordion-open-body-${faq.id}`}
-                    onClick={() => toggleFaq(faq.id)}
-                  >
-                    <span className="flex items-center justify-between">
-                      <div className="[&_div]:font-semibold [&_div]:text-[#141414] text-base md:text-2xl leading-normal text-left">
-                        <div className="ql-content-wrapper">
-                          <div className="ql-content ql-editor text-black font-normal">
-                            {faq.question}
-                          </div>
-                        </div>
-                      </div>
-                    </span>
-                    <img
-                      loading="lazy"
-                      src="https://wondr.bni.co.id/assets/images/svg/plus.png"
-                      className={`w-[32px] md:w-[48px] transition-transform duration-300 ease-in-out ${
-                        openFaq === faq.id ? 'rotate-45' : 'rotate-0'
-                      }`}
-                      alt="arrow-toggle"
-                    />
-                  </button>
-                </h5>
+              {/* FAQ Question */}
+              <h5 id={`accordion-open-heading-${faq.id}`}>
+                <button
+                  type="button"
+                  className="flex items-center justify-between w-full py-4 font-medium rtl:text-right gap-2 md:gap-3"
+                  aria-expanded={openFaq === faq.id}
+                  aria-controls={`accordion-open-body-${faq.id}`}
+                  onClick={() => toggleFaq(faq.id)}
+                >
+                  <span className="flex items-center justify-between text-base md:text-2xl font-semibold text-[#141414]">
+                    {faq.question}
+                  </span>
+                  <img
+                    loading="lazy"
+                    src={
+                      openFaq === faq.id
+                        ? "https://wondr.bni.co.id/assets/images/svg/minus.png"
+                        : "https://wondr.bni.co.id/assets/images/svg/plus.png"
+                    }
+                    className={`w-[32px] md:w-[48px] transition-transform duration-300 ease-in-out ${
+                      openFaq === faq.id
+                        ? "rotate-180 filter-orange"
+                        : "rotate-0"
+                    }`}
+                    alt="toggle-icon"
+                  />
+                </button>
+              </h5>
 
                 {/* FAQ Answer */}
                 <div
