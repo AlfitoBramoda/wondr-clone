@@ -87,7 +87,8 @@ export default function PromoSection() {
                 modules={[Navigation]}
                 spaceBetween={0} // Space is now handled by padding inside the slide
                 slidesPerView={'auto'}
-                loop={true}
+                loop={false}
+                speed={1500}
                 navigation={{
                   nextEl: '.swiper-button-next-custom',
                   prevEl: '.swiper-button-prev-custom',
